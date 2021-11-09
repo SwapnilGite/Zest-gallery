@@ -1,0 +1,189 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.logo {
+  width: 270px;
+  height: 60px;
+}
+#navlink {
+  font-size: 22px;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+
+}
+.img-responsive{
+   box-sizing: border-box;
+   border: 5px white solid;
+   overflow: hidden;
+   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+   transform: translatey(0px);
+   animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+#navitem:hover {
+  background: #0F52BA;
+  border-radius: 15px;
+}
+body{
+  /* background-color: #0D1A29; */
+  box-sizing: border-box;
+  display: grid;
+ background-image: url(https://images.pexels.com/photos/131683/pexels-photo-131683.jpeg?cs=srgb&dl=green-pattern-surface-131683.jpg&fm=jpg);
+    background-size: cover;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+
+}
+#gallery {
+   padding-top: 40px;
+}
+ @media screen and (min-width: 991px) {
+   #gallery {
+     padding: 60px 30px 0 30px;
+  }
+}
+ .img-wrapper {
+   position: relative;
+   margin-top: 15px;
+}
+ .img-wrapper img {
+   width: 100%;
+}
+ .img-overlay {
+   background: rgba(0, 0, 0, 0.7);
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0;
+}
+ .img-overlay i {
+   color: #fff;
+   font-size: 3em;
+}
+ #overlay {
+   background: rgba(0, 0, 0, 0.7);
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 999;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+ #overlay img {
+   margin: 0;
+   width: 80%;
+   height: auto;
+   object-fit: contain;
+   padding: 5%;
+}
+ @media screen and (min-width: 768px) {
+   #overlay img {
+     width: 60%;
+  }
+  .logo {
+  width: 180px;
+  height: 80px;
+}
+}
+ @media screen and (min-width: 1200px) {
+   #overlay img {
+     width: 50%;
+  }
+}
+ #nextButton {
+   color: #fff;
+   font-size: 2em;
+   transition: opacity 0.8s;
+}
+ #nextButton:hover {
+   opacity: 0.7;
+}
+ @media screen and (min-width: 768px) {
+   #nextButton {
+     font-size: 3em;
+  }
+}
+ #prevButton {
+   color: #fff;
+   font-size: 2em;
+   transition: opacity 0.8s;
+}
+ #prevButton:hover {
+   opacity: 0.7;
+}
+ @media screen and (min-width: 768px) {
+   #prevButton {
+     font-size: 3em;
+  }
+}
+ #exitButton {
+   color: #fff;
+   font-size: 2em;
+   transition: opacity 0.8s;
+   position: absolute;
+   top: 15px;
+   right: 15px;
+}
+ #exitButton:hover {
+   opacity: 0.7;
+}
+ @media screen and (min-width: 768px) {
+   #exitButton {
+     font-size: 3em;
+  }
+}
+
+h1 {
+  display: grid;
+  grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  color: #fff;
+  margin-top: 100px;
+}
+
+h1::before, h1::after {
+  content: '';
+  border-top: 6px double;
+}
+@media (max-width: 400px) {
+  h1 { font-size: 1.5rem; }
+  #overlay img {
+     width: 60%;
+  }
+  .logo {
+  width: 180px;
+  height: 50px;
+  margin-left: -29px;
+}
+}
